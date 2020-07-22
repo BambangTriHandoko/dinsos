@@ -1,8 +1,5 @@
-@extends('layout/main')
-@section('icon')
-<link rel="icon" href="https://data.tasikmalayakota.go.id/wp-content/uploads/2018/05/Logo_Kota_Tasikmalaya.png" type="image/icon type">
-@section('title','Profile')
-@section('container')
+@extends('admin/admin')
+@section('content')
 <body>
         <div class="container">
             <div class="card mt-5">
@@ -21,19 +18,19 @@
                             </tr>
                         </thead>
                         <tbody>
-						@foreach($pegawai as $p)
+                            @foreach($pegawai as $p)
                             <tr>
                                 <td>{{ $p->nip }}</td>
                                 <td>{{ $p->nama }}</td>
                                 <td>{{ $p->jabatan_struk }}</td>
                                 <td>{{ $p->jabatan_umum }}</td>
                         
-                                <td>@if ($p->image)
+                                <td>
                                 <img src="{{asset('storage/' .$p->image)}}" width="100" height="120"/></td>
-                                  @else 
-                                  tidak ada gambar
-                                  @endif
-                                  
+                                   <td>
+                                    <a href="/admin/pegawai/edit/{{ $p->id }}" class="btn btn-warning">Edit</a>
+                                    <a href="/admin/pegawai/delete/{{ $p->id }}" class="btn btn-danger">Hapus</a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -42,4 +39,4 @@
             </div>
         </div>
     </body>
-@endsection
+    @endsection

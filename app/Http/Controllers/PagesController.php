@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Pegawai;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -10,6 +10,7 @@ class PagesController extends Controller
         return view('index');
     }
     public function profile(){
-        return view('profile',['nama'=>'EK DIKUMAHAKEUN GUYS???? ']);
+      $pegawai = Pegawai::all();
+    	return view('profile', ['pegawai' => $pegawai]);
     }
 }

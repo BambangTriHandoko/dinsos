@@ -33,14 +33,29 @@
 </a>
 </li>
 
-<li class="nav-item">
-                   <a href="{{URL::to('admin/profile')}}" class="nav-link">
-                       <i class="nav-icon fa fa-book"></i>
-                       <p>PROFILE
-                           <span class="right badge badge-danger"></span>
-</p>
-</a>
-</li>
+<li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Profile
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{url('/admin/pegawai')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Daftar Pegawai</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/admin/pegawai/create')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>tambahan</p>
+                </a>
+              </li>   
+            </ul>
+          </li>
           <li class="nav-item">
             <a href="{{URL::to('admin')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
@@ -49,14 +64,29 @@
                 <span class="right badge badge-danger"></span>
               </p>
             </a>
-          <li class="nav-item">
-                   <a href="{{URL::to('admin')}}" class="nav-link">
-                       <i class="nav-icon fa fa-book"></i>
-                       <p>GANTI PASSWORD 
-                           <span class="right badge badge-danger"></span>
-                    </p>
-                    </a>
-                    </li>
+            <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                User Setting
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{url('/admin/user')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ganti password</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/admin/user/create')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>tambah User</p>
+                </a>
+              </li>
+              </ul>
+          </li>
      
                     <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
