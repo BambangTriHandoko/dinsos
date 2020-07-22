@@ -11,7 +11,11 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+*/ 
+
+
+
+
 
 
 
@@ -19,4 +23,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','PagesController@home');
 Route::get('/profile','PagesController@profile');
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+
+// Route::get('/login2','AuthController@login')->name('login2');
+// Route::post('/postlogin','AuthController@postlogin');
+Auth::routes();
+Route::get('/admin','AdminController@index')->middleware('auth');
+Route::get('/home', 'HomeController@index');
