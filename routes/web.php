@@ -21,8 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/','PagesController@home');
-Route::get('/profile','PagesController@profile');
-
+Route::get('/profile/daftarpeg','PagesController@profile');
+Route::get('/profile/index','PagesController@index');
 
 
 // Route::get('/login2','AuthController@login')->name('login2');

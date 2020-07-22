@@ -11,6 +11,10 @@ class PagesController extends Controller
     }
     public function profile(){
       $pegawai = Pegawai::all();
-    	return view('profile', ['pegawai' => $pegawai]);
+    	return view('profile/daftarpeg', ['pegawai' => $pegawai]);
+    }
+    public function index(){
+      $pegawai = Pegawai::all();
+      return view('profile/index',['pegawai' => $pegawai]);
     }
 }
