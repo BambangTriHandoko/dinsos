@@ -21,8 +21,15 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/','PagesController@home');
+Route::get('/profile/struktur','PagesController@profile1');
+Route::get('/profile/tupoksi','PagesController@profile2');
+Route::get('/profile/tujuan','PagesController@profile3');
+Route::get('/profile/selayangpandang','PagesController@profile4');
+Route::get('/profile/pmks','PagesController@profile5');
+Route::get('/profile/dasarhukum','PagesController@profile6');
 Route::get('/profile/daftarpeg','PagesController@profile');
-Route::get('/profile/index','PagesController@index');
+
+Route::resource('/profile','PagesController');
 
 
 // Route::get('/login2','AuthController@login')->name('login2');

@@ -2,7 +2,10 @@
 @section('content')
 <body>
         <div class="container">
+        <a href="/admin/pegawai/create" class="btn btn-warning">Tambah</a>
+
             <div class="card mt-5">
+                
                 <div class="card-header text-center">
                     Daftar Pegawai 
                 </div>
