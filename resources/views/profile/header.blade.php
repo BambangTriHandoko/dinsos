@@ -53,7 +53,7 @@
     <a class="dropdown-item" href="{{url('/page12')}}">12.Bantuan Bagi Korban Paska Bencana</a>
   </div>
 </li>
-      <a class="nav-item nav-link" href="{{url('/Galery')}}">galery</a>
+      <a class="nav-item nav-link" href="{{url('/gallery/index')}}">galery</a>
       <a class="nav-item nav-link" href="{{url('/Visualisasi')}}">Visualisasi</a>
       <a class="nav-item nav-link" href="http://pkh.dinsos.tasikmalayakota.go.id">PKH</a>
       <a class="nav-item nav-link" href="{{url('/Agenda')}}">Agenda</a>

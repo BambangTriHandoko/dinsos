@@ -51,13 +51,13 @@
               <li class="nav-item">
                 <a href="{{url('/admin/pegawai/create')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>edit prfile</p>
+                  <p>edit profile</p>
                 </a>
               </li>   
             </ul>
           </li>
           <li class="nav-item">
-            <a href="{{URL::to('admin')}}" class="nav-link">
+            <a href="{{URL::to('/admin/gallery/image-gallery')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 galery
@@ -88,7 +88,7 @@
               </ul>
           </li>
      
-              <li class="nav-item has-treeview">
+              <!-- <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
@@ -161,7 +161,7 @@
               </li>   
             </ul>
           </li>
-              </li>
+              </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

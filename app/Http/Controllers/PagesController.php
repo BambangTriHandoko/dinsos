@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Pegawai;
 use Illuminate\Http\Request;
-
+use App\ImageGallery;
 class PagesController extends Controller
 {
     public function home(){
@@ -12,7 +12,7 @@ class PagesController extends Controller
     public function profile(){
       $pegawai = Pegawai::all();
     	return view('profile/daftarpeg', ['pegawai' => $pegawai]);
-      return view('profile/struktur', ['pegawai' => $pegawai]);
+      // return view('profile/struktur', ['pegawai' => $pegawai]);
     }
     public function profile1(){
       $pegawai = Pegawai::all();
@@ -42,5 +42,8 @@ class PagesController extends Controller
       $pegawai = Pegawai::all();
     	return view('profile/dasarhukum', ['pegawai' => $pegawai]);
     } 
-
+    public function gallery(){
+      $images = ImageGallery::get();
+    	return view('/gallery/index',compact('images'));
+    }
 }

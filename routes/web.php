@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/','PagesController@home');
+Route::get('/gallery/index','PagesController@gallery');
 Route::get('/profile/struktur','PagesController@profile1');
 Route::get('/profile/tupoksi','PagesController@profile2');
 Route::get('/profile/tujuan','PagesController@profile3');
@@ -29,8 +30,12 @@ Route::get('/profile/pmks','PagesController@profile5');
 Route::get('/profile/dasarhukum','PagesController@profile6');
 Route::get('/profile/daftarpeg','PagesController@profile');
 
-Route::resource('/profile','PagesController');
+ Route::resource('/profile','PagesController');
 
+
+ Route::get('/admin/gallery/image-gallery', 'ImageGalleryController@index')->middleware('auth');
+Route::post('/admin/gallery/image-gallery', 'ImageGalleryController@upload')->middleware('auth');
+Route::delete('/admin/gallery/image-gallery/{id}', 'ImageGalleryController@destroy')->middleware('auth');
 
 // Route::get('/login2','AuthController@login')->name('login2');
 // Route::post('/postlogin','AuthController@postlogin');
