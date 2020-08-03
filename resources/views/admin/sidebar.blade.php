@@ -25,9 +25,9 @@
                with font-awesome or any other icon font library -->
           
                <li class="nav-item">
-                   <a href="{{URL::to('admin')}}" class="nav-link">
+                   <a href="{{URL::to('admin/artikel')}}" class="nav-link">
                        <i class="nav-icon fa fa-book"></i>
-                       <p>POSTINGAN
+                       <p>Artikel
                            <span class="right badge badge-danger"></span>
 </p>
 </a>
@@ -51,12 +51,12 @@
               <li class="nav-item">
                 <a href="{{url('/admin/pegawai/create')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>edit profile</p>
+                  <p>edit pegawai</p>
                 </a>
               </li>   
             </ul>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="{{URL::to('/admin/gallery/image-gallery')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
@@ -64,6 +64,7 @@
                 <span class="right badge badge-danger"></span>
               </p>
             </a>
+            </li> -->
             <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>

@@ -22,27 +22,7 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="{{url('/')}}">Home</a>
       <a class="nav-item nav-link" href="{{url('/profile')}}">Profil</a>
-      <!-- <a class="nav-item nav-link" href="{{url('/mahasiswa')}}">Layanan</a> -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Layanan
-        </a>
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <a class="dropdown-item" href="{{url('/page1')}}">1.Bantuan Orang Terlantar Dalam Perjalanan(BOTP)</a>
-    <a class="dropdown-item" href="{{url('/page2')}}">2.Rekomendasi KIS,KIP,jampersal,dan Jamkesda</a>
-    <a class="dropdown-item" href="{{url('/page3')}}">3.Rekomendasi Pengangkatan Anak</a>
-    <a class="dropdown-item" href="{{url('/page4')}}">4.Surat Tanda Terdaftar Untuk Lembaga Kesejahteraan Sosial(LKS)</a>
-    <a class="dropdown-item" href="{{url('/page5')}}">5.Fasilitas Anak Jalanan dan Anak Terlantar</a>
-    <a class="dropdown-item" href="{{url('/page6')}}">6.Pendampingan dan Perlindungan Anak Berhadapan Dengan Hukum</a>
-    <a class="dropdown-item" href="{{url('/page7')}}">7.Rekomendasi Dan Rujukan Lansia Terlantar</a>
-    <a class="dropdown-item" href="{{url('/page8')}}">8.Rekomendasi Dan Rujukan Disalbiltas Fisik dan </a>
-    <a class="dropdown-item" href="{{url('/page9')}}">9.Rekomendasi Rujukan Korban Penyalahguanaan NAPZA</a>
-    <a class="dropdown-item" href="{{url('/page10')}}">10.Rekomendasi Rujukan Tindak Kekerasan</a>
-    <a class="dropdown-item" href="{{url('/page11')}}">11.Rekomendasi Dan Rujukan Wanita Tuna Susila</a>
-    <a class="dropdown-item" href="{{url('/page12')}}">12.Bantuan Bagi Korban Paska Bencana</a>
-  </div>
-</li>
+      <a class="nav-item nav-link" href="{{url('/layanan/index')}}">Layanan</a>
       <a class="nav-item nav-link" href="{{url('/gallery/index')}}">galery</a>
       <a class="nav-item nav-link" href="{{url('/Visualisasi')}}">Visualisasi</a>
       <a class="nav-item nav-link" href="http://pkh.dinsos.tasikmalayakota.go.id">PKH</a>

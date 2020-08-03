@@ -29,7 +29,7 @@ Route::get('/profile/selayangpandang','PagesController@profile4');
 Route::get('/profile/pmks','PagesController@profile5');
 Route::get('/profile/dasarhukum','PagesController@profile6');
 Route::get('/profile/daftarpeg','PagesController@profile');
-
+Route::get('/layanan/index','PagesController@layanan');
  Route::resource('/profile','PagesController');
 
 
@@ -42,6 +42,12 @@ Route::delete('/admin/gallery/image-gallery/{id}', 'ImageGalleryController@destr
 Auth::routes();
 Route::get('/admin','AdminController@index')->middleware('auth');
 Route::resource('/admin/pegawai', 'PegawaiController')->middleware('auth');
+Route::resource('/admin/artikel', 'ArtikelController')->middleware('auth');
+// Route::get('/admin/artikel/create', 'ArtikelController@create')->middleware('auth');
+Route::get('/admin/artikel/edit/{id}' , 'ArtikelController@edit')->middleware('auth');
+Route::post('/admin/artikel/create', 'ArtikelController@upload')->middleware('auth');
+Route::get('/admin/artikel/delete/{id}','ArtikelController@destroy')->middleware('auth');
+Route::post('/admin/artikel/store', 'ArtikelController@store')->middleware('auth');
 Route::get('/admin/pegawai/create', 'PegawaiController@create')->middleware('auth');
 Route::post('/admin/pegawai/store', 'PegawaiController@store')->middleware('auth');
 Route::get('/admin/pegawai/edit/{id}', 'PegawaiController@edit')->middleware('auth');

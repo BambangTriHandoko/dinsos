@@ -46,4 +46,7 @@ class PagesController extends Controller
       $images = ImageGallery::get();
     	return view('/gallery/index',compact('images'));
     }
+    public function layanan(){
+      return view('layanan/index');
+  }
 }

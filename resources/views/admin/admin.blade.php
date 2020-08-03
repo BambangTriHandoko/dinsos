@@ -8,7 +8,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   -->
   <title>Admin</title>
 
   <!-- Font Awesome Icons -->
@@ -75,5 +78,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{asset('lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('lte/dist/js/adminlte.min.js')}}"></script>
+<script src="{{asset('editor/summernote.min.js')}}"></script>
+<link href="{{asset('editor/summernote.min.css')}}" rel="stylesheet">
+  
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+  </script>
 </body>
 </html>

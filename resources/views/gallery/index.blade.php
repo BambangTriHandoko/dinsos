@@ -1,34 +1,60 @@
-<!-- Navbar -->
-@include('gallery/header')
+<html>
+<head>
+    <title>Image Gallery Example</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- References: https://github.com/fancyapps/fancyBox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
+
+    <style type="text/css">
+    .gallery
+    {
+        display: inline-block;
+        margin-top: 20px;
+    }
+    .close-icon{
+    	border-radius: 50%;
+        position: absolute;
+        right: 5px;
+        top: -10px;
+        padding: 5px 8px;
+    }
+    .form-image-upload{
+        background: #e8e8e8 none repeat scroll 0 0;
+        padding: 15px;
+    }
+    </style>
+</head>
+<body>
 
 
 <div class="container">
 
 
-    <h3>GALLERY</h3>
+    <h3> Gallery</h3>
+    
+
 
     <div class="row">
     <div class='list-group gallery'>
 
-    <div class="card-deck">
 
             @if($images->count())
                 @foreach($images as $image)
-
-  <div class="col mb-4">
-    <div class="card">
-      <a href="/images/{{ $image->image }}"><img src="/images/{{ $image->image }}" class="card-img-top" alt=""></a>
-      <div class="card-body">
-        <a href="/images/{{ $image->image }}"><h5 class="card-title" >{{ $image->title }}</h5></a>
-        <p class="card-text">di upload pada {{$image->updated_at}}</p>
-       </div>
-    </div>
-  </div>
-
-                 @endforeach
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                    <a class="thumbnail fancybox" rel="ligthbox" href="/images/{{ $image->image }}" >
+                        <img class="img-responsive" alt="" src="/images/{{ $image->image }}" width="250" height="160"/>
+                        <div class='text-center'>
+                            <small class='text-muted'>{{ $image->title }}</small>
+                        </div> <!-- text-center / end -->
+                    </a>
+                    </div> <!-- col-6 / end -->
+                @endforeach
             @endif
-            </div>
+
 
         </div> <!-- list-group / end -->
     </div> <!-- row / end -->
@@ -36,3 +62,14 @@
 
 
 </body>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".fancybox").fancybox({
+            openEffect: "none",
+            closeEffect: "none"
+        });
+    });
+</script>
+</html>

@@ -43,7 +43,7 @@ class PegawaiController extends Controller
             'nama' => 'required',
             'jabatan_struk' => 'required',
             'jabatan_umum' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:12048'
         ]);
         if ($request->file('image')){
             $image = $request->file('image')->store('images','public'); 
