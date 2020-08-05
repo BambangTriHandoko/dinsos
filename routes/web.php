@@ -21,7 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/','PagesController@home');
-Route::get('/gallery/index','PagesController@gallery');
+Route::get('/berita/{artikel_id}','PagesController@berita');
+Route::get('/gallery','PagesController@gallery');
 Route::get('/profile/struktur','PagesController@profile1');
 Route::get('/profile/tupoksi','PagesController@profile2');
 Route::get('/profile/tujuan','PagesController@profile3');
@@ -36,18 +37,16 @@ Route::get('/layanan/index','PagesController@layanan');
  Route::get('/admin/gallery/image-gallery', 'ImageGalleryController@index')->middleware('auth');
 Route::post('/admin/gallery/image-gallery', 'ImageGalleryController@upload')->middleware('auth');
 Route::delete('/admin/gallery/image-gallery/{id}', 'ImageGalleryController@destroy')->middleware('auth');
-
-// Route::get('/login2','AuthController@login')->name('login2');
-// Route::post('/postlogin','AuthController@postlogin');
 Auth::routes();
 Route::get('/admin','AdminController@index')->middleware('auth');
 Route::resource('/admin/pegawai', 'PegawaiController')->middleware('auth');
-Route::resource('/admin/artikel', 'ArtikelController')->middleware('auth');
-// Route::get('/admin/artikel/create', 'ArtikelController@create')->middleware('auth');
-Route::get('/admin/artikel/edit/{id}' , 'ArtikelController@edit')->middleware('auth');
-Route::post('/admin/artikel/create', 'ArtikelController@upload')->middleware('auth');
-Route::get('/admin/artikel/delete/{id}','ArtikelController@destroy')->middleware('auth');
-Route::post('/admin/artikel/store', 'ArtikelController@store')->middleware('auth');
+Route::get('/admin/artikel/', 'ArtikelController@index')->middleware('auth');
+Route::get('/admin/artikel/create', 'ArtikelController@create')->middleware('auth');
+Route::post('/admin/artikel/create', 'ArtikelController@store')->middleware('auth');
+Route::get('/admin/artikel/{id_artikel}', 'ArtikelController@edit')->middleware('auth');
+Route::put('/admin/artikel/{id_artikel}', 'ArtikelController@update')->middleware('auth');
+Route::get('/admin/artikel/delete/{id}', 'ArtikelController@destroy')->middleware('auth');
+
 Route::get('/admin/pegawai/create', 'PegawaiController@create')->middleware('auth');
 Route::post('/admin/pegawai/store', 'PegawaiController@store')->middleware('auth');
 Route::get('/admin/pegawai/edit/{id}', 'PegawaiController@edit')->middleware('auth');

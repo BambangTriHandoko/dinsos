@@ -1,75 +1,93 @@
-<html>
-<head>
-    <title>Image Gallery Example</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- References: https://github.com/fancyapps/fancyBox -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-
-
-    <style type="text/css">
-    .gallery
-    {
-        display: inline-block;
-        margin-top: 20px;
-    }
-    .close-icon{
-    	border-radius: 50%;
-        position: absolute;
-        right: 5px;
-        top: -10px;
-        padding: 5px 8px;
-    }
-    .form-image-upload{
-        background: #e8e8e8 none repeat scroll 0 0;
-        padding: 15px;
-    }
-    </style>
-</head>
-<body>
-
-
+@extends('layouts/main')
+@section('content')
 <div class="container">
+		
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                <br>      
+                <div class="col-md-8">
+                <br>
+                    <div class="section-title">
+                            <h2>Berita Harian</h2>
+                        </div>
+                    </div>
+        <div class="row">
+            <div class="col-md-12">
+                
+            </div>
+
+            <!-- post -->
+            <!-- /post -->
+
+            <!-- post -->
+            <!-- /post -->
+
+            <!-- post -->
+            <!-- /post -->
+            <?php 
+                $artikel = \DB::table('artikel')->orderby('created_at','desc')->get(); 
+                ?>
+
+@foreach($artikel as $at)
+            <div class="col-md-3">
+                <div class="post">
+                <a class="post-img" href="{{url('/berita/'.$at->artikel_id)}}"><img src="{{asset('uploads/'.$at->gambar)}}" style="width: 240px; height: 180px;" alt=""></a>							<div class="post-body">
+                        <div class="post-meta">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            @endforeach
+            <div class="clearfix visible-md visible-lg"></div>
+
+            <!-- post -->
+            
+            <!-- /post -->
+
+            <!-- post -->
+            
+            <!-- /post -->
+
+            <!-- post -->
+            
+            <!-- /post -->
+        </div>
+        <!-- /row -->
+
+                    <!-- /post -->
+
+                    <!-- /post -->
+                    
+                <!-- /ad -->
+                
+                <!-- catagories -->
+            <div class="col-md-4">
+                <div class="aside-widget">
+                    <div class="section-title">
+                        <h2>Catagories</h2>
+                    </div>
+                    <div class="category-widget">
+                        <ul>
+                            <li><a href="#" class="cat-1">DINSOS<span>340</span></a></li>
+                            <li><a href="#" class="cat-2">REHSOS<span>74</span></a></li>
+                            <li><a href="#" class="cat-4">PKH<span>41</span></a></li>
+                            <li><a href="#" class="cat-3">PEMBERSOS<span>35</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <!-- /catagories -->
+                
+                <!-- tags -->
+                <!-- /tags -->
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+</div>
 
 
-    <h3> Gallery</h3>
-    
-
-
-    <div class="row">
-    <div class='list-group gallery'>
-
-
-            @if($images->count())
-                @foreach($images as $image)
-                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                    <a class="thumbnail fancybox" rel="ligthbox" href="/images/{{ $image->image }}" >
-                        <img class="img-responsive" alt="" src="/images/{{ $image->image }}" width="250" height="160"/>
-                        <div class='text-center'>
-                            <small class='text-muted'>{{ $image->title }}</small>
-                        </div> <!-- text-center / end -->
-                    </a>
-                    </div> <!-- col-6 / end -->
-                @endforeach
-            @endif
-
-
-        </div> <!-- list-group / end -->
-    </div> <!-- row / end -->
-</div> <!-- container / end -->
-
-
-</body>
-
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(".fancybox").fancybox({
-            openEffect: "none",
-            closeEffect: "none"
-        });
-    });
-</script>
-</html>
+@endsection

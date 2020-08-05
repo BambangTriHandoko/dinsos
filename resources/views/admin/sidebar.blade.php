@@ -14,7 +14,7 @@
           <img src="https://www.logolynx.com/images/logolynx/23/23938578fb8d88c02bc59906d12230f3.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="{{URL::to('admin')}}" class="d-block">HAI MASTER</a>
+          <a href="{{URL::to('admin')}}" class="d-block">HAI Admin</a>
         </div>
       </div>
 
@@ -56,7 +56,7 @@
               </li>   
             </ul>
           </li>
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a href="{{URL::to('/admin/gallery/image-gallery')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
@@ -64,7 +64,7 @@
                 <span class="right badge badge-danger"></span>
               </p>
             </a>
-            </li> -->
+            </li>
             <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
@@ -88,81 +88,6 @@
               </li>
               </ul>
           </li>
-     
-              <!-- <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Layanan
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{url('/page1')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>page1</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{url('/page2')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>page2</p>
-                </a>
-              </li><li class="nav-item">
-                <a href="{{url('/page3')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>page3</p>
-                </a>
-              </li><li class="nav-item">
-                <a href="{{url('/page4')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>page4</p>
-                </a>
-              </li><li class="nav-item">
-                <a href="{{url('/page5')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>page5</p>
-                </a>
-              </li><li class="nav-item">
-                <a href="{{url('/page6')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>page6</p>
-                </a>
-              </li><li class="nav-item">
-                <a href="{{url('/page7')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>page7</p>
-                </a>
-              </li><li class="nav-item">
-                <a href="{{url('/page8')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>page8</p>
-                </a>
-              </li><li class="nav-item">
-                <a href="{{url('/page9')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>page9</p>
-                </a>
-              </li><li class="nav-item">
-                <a href="{{url('/page10')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>page10</p>
-                </a>
-              </li><li class="nav-item">
-                <a href="{{url('/page11')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>page11</p>
-                </a>
-              </li><li class="nav-item">
-                <a href="{{url('/page12')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>page12</p>
-                </a>
-              </li>   
-            </ul>
-          </li>
-              </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

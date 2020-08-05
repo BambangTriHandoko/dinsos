@@ -13,38 +13,49 @@ class ArtikelController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $artikel = artikel::all();
-    	return view('admin/artikel/create', ['artikel' => $artikel]);
+    {   $title = 'List Artikel';    
+        $data =\DB::table('artikel as a')->join('users as u','u.id','=','a.user_id')->get();
+        
+        return view('admin/artikel/index',compact('title','data'));
     }
-
+    public function create(){
+        $title = 'Tambah Artikel';
+        return view('admin/artikel/create');
+    }
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function upload(Request $request)
+    public function store(Request $request)
     {
     	$this->validate($request, [
-    		'judul' => 'required',
-            
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:15048',
-            
+            'judul'=>'required',
+            'isi'=>'required'
         ]);
+        $file = $request->file('image');
+        $data = array();
+        if($file){
+            $destinationPath = 'uploads';
+            $file->move($destinationPath,$file->getClientOriginalName());
+            $data['judul'] = $request->judul;
+            $data['isi'] = $request->isi;
+            $data['user_id'] = \Auth::user()->id;
+            $data['created_at'] = date('Y-m-d H:i:s');
+            $data['updated_at'] = date('Y-m-d H:i:s');
+            $data['gambar'] = $file->getClientOriginalName();
+        }else{
+            $data['judul'] = $request->judul;
+            $data['isi'] = $request->isi;
+            $data['user_id'] = \Auth::user()->id;
+            $data['created_at'] = date('Y-m-d H:i:s');
+            $data['updated_at'] = date('Y-m-d H:i:s');
+        }
+        \DB::table('artikel')->insert($data);
+        \Session::flash('sukses','Data berhasil Tersimpan');
+        return redirect('admin/artikel');
 
-
-        $input['image'] = time().'.'.$request->image->getClientOriginalExtension();
-        $request->image->move(public_path('images'), $input['image']);
-
-
-        $input['judul'] = $request->judul;
-        artikel::create($input);
-      
-
-
-    	return back()
-    		->with('success','Image Uploaded successfully.');
-    }
+          }
     /**
      * Store a newly created resource in storage.
      *
@@ -59,9 +70,11 @@ class ArtikelController extends Controller
      * @param  \App\artikel  $artikel
      * @return \Illuminate\Http\Response
      */
-    public function show(artikel $artikel)
+    public function edit($id)
     {
-        //
+        $title ='EDIT';
+        $dt = \DB::table('artikel')->where('artikel_id',$id)->first();
+        return view('admin.artikel.edit',compact('dt'));
     }
 
     /**
@@ -70,10 +83,6 @@ class ArtikelController extends Controller
      * @param  \App\artikel  $artikel
      * @return \Illuminate\Http\Response
      */
-    public function edit(artikel $artikel)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -82,9 +91,31 @@ class ArtikelController extends Controller
      * @param  \App\artikel  $artikel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, artikel $artikel)
+    public function update(Request $request,$id)
     {
-        //
+        $this->validate($request, [
+            'judul'=>'required',
+            'isi'=>'required'
+        ]);
+        $file = $request->file('image');
+        $data = array();
+        if($file){
+            $destinationPath = 'uploads';
+            $file->move($destinationPath,$file->getClientOriginalName());
+            $data['judul'] = $request->judul;
+            $data['isi'] = $request->isi;
+            $data['user_id'] = \Auth::user()->id;
+            $data['updated_at'] = date('Y-m-d H:i:s');
+            $data['gambar'] = $file->getClientOriginalName();
+        }else{
+            $data['judul'] = $request->judul;
+            $data['isi'] = $request->isi;
+            $data['user_id'] = \Auth::user()->id;
+            $data['updated_at'] = date('Y-m-d H:i:s');
+        }
+        \DB::table('artikel')->where('artikel_id',$id)->update($data);
+        \Session::flash('sukses','Data berhasil Tersimpan');
+        return redirect('admin/artikel');
     }
 
     /**
@@ -95,8 +126,7 @@ class ArtikelController extends Controller
      */
     public function destroy($id)
     {
-    	artikel::find($id)->delete();
-    	return back()
-    		->with('success','Image removed successfully.');	
+        $artikel = \DB::table('artikel')->where('artikel_id',$id)->delete();
+     return back();
     }
 }

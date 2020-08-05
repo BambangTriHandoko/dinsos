@@ -8,7 +8,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/darkly/bootstrap.min.css" >
+  <link rel="stylesheet" href="{{asset('editor/summernote-bs4.css')}}">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/codemirror.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/theme/eclipse.css">
+  <!-- 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    -->
@@ -74,17 +78,39 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- jQuery -->
 <script src="{{asset('lte/plugins/jquery/jquery.min.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/codemirror.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/mode/xml/xml.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/formatting.js"></script>
 <!-- Bootstrap 4 -->
 <script src="{{asset('lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('lte/dist/js/adminlte.min.js')}}"></script>
 <script src="{{asset('editor/summernote.min.js')}}"></script>
 <link href="{{asset('editor/summernote.min.css')}}" rel="stylesheet">
+<script src="{{asset('editor/summernote-bs4.js')}}"></script>
   
 <script>
-    $(document).ready(function() {
-        $('#summernote').summernote();
+    $('.summernote').summernote({
+      
+      height:150,
+      codemirror:{
+        theme: 'eclipse'
+      },
+      toolbar: [
+    
+    ['basic',['style', 'fontname','fontsize']],
+    ['style',['bold','italic','underline','clear']],
+    ['font',['strikethrough','superscript','subscript']],
+    ['fontsize',['fontsize']],
+    ['color',['furecolor','blackcolor']],
+    ['block',['ul','ol','paragraph']],
+    ['media',['link','picture','video','table','hr']],
+    ['height',['height','codeview','fullscreen','undo','redo']]
+          ]
     });
+    
   </script>
 </body>
 </html>

@@ -43,10 +43,14 @@ class PagesController extends Controller
     	return view('profile/dasarhukum', ['pegawai' => $pegawai]);
     } 
     public function gallery(){
-      $images = ImageGallery::get();
-    	return view('/gallery/index',compact('images'));
+      return view('gallery/index');
     }
     public function layanan(){
       return view('layanan/index');
   }
+  public function berita($artikel_id){
+    $artikel = \DB::table('artikel')->where('artikel_id',$artikel_id)->first();
+    return view('/berita/index',compact('artikel'));
+  }
 }
+ 
