@@ -12,12 +12,12 @@
 						<div class="section-row sticky-container">
 							<div class="main-post">
                                 <br>
-								<h3>{{$artikel->judul}}</h3>
+								<h2>{{$artikel->judul}}</h2>
+								<h5>dipublikasi pada tanggal {{date('d M Y',strtotime($artikel->created_at))}}</h5>
                                 <img src="{{asset('uploads/'.$artikel->gambar)}}" style="width: 660px; height: 360px;" alt="">
-                                <p><b>
+                                
                                     {!! $artikel->isi !!}
-</b>
-                                </p>
+
                             </div>
 						</div>
 
@@ -73,21 +73,6 @@
 						<!-- /catagories -->
 						
 						<!-- tags -->
-						<div class="aside-widget">
-							<div class="tags-widget">
-								<ul>
-									<li><a href="#">Chrome</a></li>
-									<li><a href="#">CSS</a></li>
-									<li><a href="#">Tutorial</a></li>
-									<li><a href="#">Backend</a></li>
-									<li><a href="#">JQuery</a></li>
-									<li><a href="#">Design</a></li>
-									<li><a href="#">Development</a></li>
-									<li><a href="#">JavaScript</a></li>
-									<li><a href="#">Website</a></li>
-								</ul>
-							</div>
-						</div>
 						<!-- /tags -->
 						
 						<!-- archive -->

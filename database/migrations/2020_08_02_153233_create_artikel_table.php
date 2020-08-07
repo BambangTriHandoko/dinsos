@@ -19,6 +19,7 @@ class CreateArtikelTable extends Migration
             $table->text('gambar');
             $table->text('isi');
             $table->integer('user_id');
+            $table->string('kategori');
             $table->timestamps();
         });
     }

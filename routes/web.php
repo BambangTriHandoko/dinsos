@@ -38,7 +38,7 @@ Route::get('/layanan/index','PagesController@layanan');
 Route::post('/admin/gallery/image-gallery', 'ImageGalleryController@upload')->middleware('auth');
 Route::delete('/admin/gallery/image-gallery/{id}', 'ImageGalleryController@destroy')->middleware('auth');
 Auth::routes();
-Route::get('/admin','AdminController@index')->middleware('auth');
+Route::get('/forms-admin','AdminController@index')->middleware('auth');
 Route::resource('/admin/pegawai', 'PegawaiController')->middleware('auth');
 Route::get('/admin/artikel/', 'ArtikelController@index')->middleware('auth');
 Route::get('/admin/artikel/create', 'ArtikelController@create')->middleware('auth');

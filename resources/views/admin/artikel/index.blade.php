@@ -10,6 +10,7 @@
 <tr>
 <th>#</th>
 <th>judul</th>
+<th>kategori</th>
 <th>penulis</th>
 <th>dibuat pada</th>
 </tr>
@@ -19,6 +20,7 @@
 <tr>
 <td>{{ $e+1 }}</td>
 <td>{{ $dt->judul }}</td>
+<td>{{ $dt->kategori }}</td>
 <td>{{ $dt->name }}</td>
 <td>{{ $dt->created_at }}</td>
 <td><p>

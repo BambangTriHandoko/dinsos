@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+	<style>
+            header{
+                background-color: #F8F8FF;
+            }
+            main{
+                background-color: #F0FFF0;
+            }
+            footer{
+                background-color: #FAEBD7;
+            }
+        </style>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,8 +42,10 @@
 	<body>
 
 		<!-- Header -->
+	
 		<header id="header">
 			<!-- Nav -->
+			<header>
 			<div id="nav " >
 				<!-- Main Nav -->
 				<div id="nav-fixed" >
@@ -65,6 +78,7 @@
 						<!-- /search & aside toggle -->
 					</div>
 				</div>
+
 				<!-- /Main Nav -->
 
 				<!-- Aside Nav -->
@@ -72,8 +86,8 @@
 
 					<!-- widget posts -->
 					
-				<!-- Aside Nav -->
-			</div>
+				
+			
 			<!-- /Nav -->
 		</header>
 		<!-- /Header -->
@@ -82,84 +96,57 @@
 
 		<!-- /section -->
 		<!-- section -->
+		<main>
 @include('layouts.content')
 
 		<!-- section -->
 				
-
+</main>
 		<!-- Footer -->
 		<footer id="footer">
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
 				<div class="row">
-					<div class="col-md-5">
-						<div class="footer-widget">
-							<div class="footer-logo">
-								<a href="index.html" class="logo"><img src="./img/logo.png" alt=""></a>
+					
+					<div class="col-md-3">
+						<div class="col-lg-4 col-md-4 col-sm-4">
+				<div id="custom_html-3" class="widget_text widget widget_custom_html"><span><h5>HUBUNGI KAMI</h5></span><div class="textwidget custom-html-widget"><center>
+	<table id="tabel-kontak">
+		<tbody><tr>
+			<td><span class="fa fa-map-marker" style="font-size:1.2em">:</span></td>
+			<td><a href="https://goo.gl/maps/1vzohfFLxDwi6Any6" ><h4>Jl. Ir H Djuanda Komplek Perkantoran<h4></a></td>
+		</tr>
+		<tr>
+			<td><span class="fa fa-phone" style="font-size:1.2em">:</span></td>
+			<td><a href="tel:02657523848">(0265) 7523848</a></td>
+		</tr>
+		<tr>
+			<td><span class="fas fa-envelope" style="font-size:1.2em">:</span></td>
+			<td><a href="mailto:dinasosialkotatasik@gmail.com">dinsos.kotatasik@gmail.com</a></td>
+		</tr>
+		<tr>
+			<td><span class="fa fa-instagram" style="font-size:1.2em">:</span></td>
+			<td><a href="http://instagram.com/dinsostasikmalayakota" target="_blank" rel="noopener noreferrer">@dinsostasikmalayakota</a></td>
+		</tr>
+		<tr>
+			<td><span class="fa fa-globe" style="font-size:1.2em">:</span></td>
+			<td><a href="http://tasikmalayakota.go.id" target="_blank" rel="noopener noreferrer">Website Resmi Kota Tasikmalaya</a></td>
+		</tr>
+	</tbody></table>
+</div>			</div>
 							</div>
-							<ul class="footer-nav">
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Advertisement</a></li>
-							</ul>
-							<div class="footer-copyright">
-								<span>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-4">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="footer-widget">
-									<h3 class="footer-title">About Us</h3>
-									<ul class="footer-links">
-										<li><a href="about.html">About Us</a></li>
-										<li><a href="#">Join Us</a></li>
-										<li><a href="contact.html">Contacts</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="footer-widget">
-									<h3 class="footer-title">Catagories</h3>
-									<ul class="footer-links">
-										<li><a href="category.html">Web Design</a></li>
-										<li><a href="category.html">JavaScript</a></li>
-										<li><a href="category.html">Css</a></li>
-										<li><a href="category.html">Jquery</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
 					</div>
 
 					<div class="col-md-3">
-						<div class="footer-widget">
-							<h3 class="footer-title">Join our Newsletter</h3>
-							<div class="footer-newsletter">
-								<form>
-									<input class="input" type="email" name="newsletter" placeholder="Enter your email">
-									<button class="newsletter-btn"><i class="fa fa-paper-plane"></i></button>
-								</form>
-							</div>
-							<ul class="footer-social">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							</ul>
-						</div>
-					</div>
-
+					<div class="col-lg-4 col-md-3 col-sm-4">
+				<div id="custom_html-4" class="widget_text widget widget_custom_html"><h4 class="widget-title h6"><span><h4>LOKASI</h4></span></h4><div class="textwidget custom-html-widget"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.3537044252372!2d108.20217792917812!3d-7.307207099670387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f50cff99d8e43%3A0x36ee9ad28e7814e!2sDinas+Sosial+Tasikmalaya!5e0!3m2!1sen!2sid!4v1564370132216!5m2!1sen!2sid" width="450" height="250" frameborder="0" style="border:0" allowfullscreen=""></iframe><br><br><br>
+</div></div>			</div>
 				</div>
 				<!-- /row -->
 			</div>
 			<!-- /container -->
 		</footer>
-		<!-- /Footer -->
 
 		<!-- jQuery Plugins -->
 		<script src="{{asset('webmag/js/jquery.min.js')}}"></script>

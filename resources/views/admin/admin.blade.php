@@ -100,7 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       },
       toolbar: [
     
-    ['basic',['style', 'fontname','fontsize']],
+    ['basic',['style', 'fontname','color']],
     ['style',['bold','italic','underline','clear']],
     ['font',['strikethrough','superscript','subscript']],
     ['fontsize',['fontsize']],

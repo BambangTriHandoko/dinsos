@@ -13,6 +13,15 @@
                     <input type="name" name="judul" class="form-control" placeholder="Judul">
                   </div>
                   <div class="form-group">
+                    <label >Kategori</label>
+                    <select name='kategori'>
+		<option value='DINSOS'>DINSOS</option>
+		<option value='PKH'>PKH</option>
+		<option value='REHSOS'>REHSOS</option>
+		<option value='PEMBERSOS'>PEMBERSOS</option>
+		<option value='UNCATEGORY'>UNCATEGORY</option>
+	  </select></div>
+                  <div class="form-group">
                     <label for="exampleInputPassword1">ISI</label>
                     <textarea class="form-control summernote" name="isi" id="" cols="30" rows="10"></textarea>
                     </div>

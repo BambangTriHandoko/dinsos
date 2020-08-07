@@ -39,6 +39,7 @@ class ArtikelController extends Controller
             $destinationPath = 'uploads';
             $file->move($destinationPath,$file->getClientOriginalName());
             $data['judul'] = $request->judul;
+            $data['kategori'] = $request->kategori;
             $data['isi'] = $request->isi;
             $data['user_id'] = \Auth::user()->id;
             $data['created_at'] = date('Y-m-d H:i:s');
@@ -46,6 +47,7 @@ class ArtikelController extends Controller
             $data['gambar'] = $file->getClientOriginalName();
         }else{
             $data['judul'] = $request->judul;
+            $data['kategori'] = $request->kategori;
             $data['isi'] = $request->isi;
             $data['user_id'] = \Auth::user()->id;
             $data['created_at'] = date('Y-m-d H:i:s');
@@ -95,7 +97,8 @@ class ArtikelController extends Controller
     {
         $this->validate($request, [
             'judul'=>'required',
-            'isi'=>'required'
+            'isi'=>'required',
+            'kategori'=>'required'
         ]);
         $file = $request->file('image');
         $data = array();
@@ -103,12 +106,14 @@ class ArtikelController extends Controller
             $destinationPath = 'uploads';
             $file->move($destinationPath,$file->getClientOriginalName());
             $data['judul'] = $request->judul;
+            $data['kategori'] = $request->kategori;
             $data['isi'] = $request->isi;
             $data['user_id'] = \Auth::user()->id;
             $data['updated_at'] = date('Y-m-d H:i:s');
             $data['gambar'] = $file->getClientOriginalName();
         }else{
             $data['judul'] = $request->judul;
+            $data['kategori'] = $request->kategori;
             $data['isi'] = $request->isi;
             $data['user_id'] = \Auth::user()->id;
             $data['updated_at'] = date('Y-m-d H:i:s');

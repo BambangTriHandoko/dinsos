@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="{{url('forms-admin')}}" class="brand-link">
       <img src="http://dinsos.tasikmalayakota.go.id/wp-content/uploads/2019/08/LOGO-BARU-DINSOS.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF" class="brand-image "
            style="opacity: .8">
       <span class="brand-text font-weight-light">Admin</span>
@@ -14,7 +14,7 @@
           <img src="https://www.logolynx.com/images/logolynx/23/23938578fb8d88c02bc59906d12230f3.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="{{URL::to('admin')}}" class="d-block">HAI Admin</a>
+          <a href="{{URL::to('forms-admin')}}" class="d-block">HAI Admin</a>
         </div>
       </div>
 
@@ -56,7 +56,7 @@
               </li>   
             </ul>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="{{URL::to('/admin/gallery/image-gallery')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
@@ -65,7 +65,7 @@
               </p>
             </a>
             </li>
-            <li class="nav-item has-treeview">
+            <li class="nav-item has-treeview"> -->
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>

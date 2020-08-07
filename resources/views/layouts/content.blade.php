@@ -35,8 +35,8 @@
 						<div class="post">
                         <a class="post-img" href="{{url('/berita/'.$at->artikel_id)}}"><img src="{{asset('uploads/'.$at->gambar)}}" style="width: 260px; height: 200px;" alt=""></a>							<div class="post-body">
 								<div class="post-meta">
-                                <a class="post-category cat-2" href="category.html"></a>
-								<span class="post-date">dipublikasi pada tanggal {{date('d M Y',strtotime($at->created_at))}}</span>
+                                <a class="post-category cat-2" href="">{{$at->kategori}}</a>
+								<span class="post-date">tanggal {{date('d M Y',strtotime($at->created_at))}}</span>
 								</div>
 								<h3 class="post-title"><a href="{{url('/berita/'.$at->artikel_id)}}">{{$at->judul}}</a></h3>
 							</div>
@@ -45,7 +45,22 @@
                     <br>
                     @endforeach
 					<div class="clearfix visible-md visible-lg"></div>
-
+					<div class="col-md-4">
+                        <div class="aside-widget">
+							<div class="section-title">
+								<h2>Catagories</h2>
+							</div>
+							<div class="category-widget">
+								<ul>
+									<li><a href="#" class="cat-1">DINSOS<span> </span></a></li>
+									<li><a href="#" class="cat-2">REHSOS<span></span></a></li>
+									<li><a href="#" class="cat-4">PKH<span></span></a></li>
+									<li><a href="#" class="cat-3">PEMBERSOS<span></span></a></li>
+								</ul>
+							</div>
+                        </div>
+                        </div>
+				
 					<!-- post -->
 					
 					<!-- /post -->
@@ -67,22 +82,7 @@
 						<!-- /ad -->
 						
 						<!-- catagories -->
-                    <div class="col-md-4">
-                        <div class="aside-widget">
-							<div class="section-title">
-								<h2>Catagories</h2>
-							</div>
-							<div class="category-widget">
-								<ul>
-									<li><a href="#" class="cat-1">DINSOS<span>340</span></a></li>
-									<li><a href="#" class="cat-2">REHSOS<span>74</span></a></li>
-									<li><a href="#" class="cat-4">PKH<span>41</span></a></li>
-									<li><a href="#" class="cat-3">PEMBERSOS<span>35</span></a></li>
-								</ul>
-							</div>
-                        </div>
-                        </div>
-						<!-- /catagories -->
+                  		<!-- /catagories -->
 						
 						<!-- tags -->
 						<div class="aside-widget">
