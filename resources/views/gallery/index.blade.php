@@ -67,7 +67,7 @@
             <div class="col-md-4">
                 <div class="aside-widget">
                     <div class="section-title">
-                        <h2>Catagories</h2>
+                        <h2>Categories</h2>
                     </div>
                     <div class="category-widget">
                     <?php 
