@@ -70,10 +70,13 @@
 						<!-- search & aside toggle -->
 						<div class="nav-btns">
 							<button class="search-btn"><i class="fa fa-search"></i></button>
+						<form action="{{url('search')}}" method="get">
+							
 							<div class="search-form">
 								<input class="search-input" type="text" name="search" placeholder="Enter Your Search ...">
-								<button class="search-close"><i class="fa fa-times"></i></button>
+								<button type="submit"><i class="fa fa-times"></i></button>
 							</div>
+							</form>
 						</div>
 						<!-- /search & aside toggle -->
 					</div>
@@ -96,6 +99,9 @@
 
 		<!-- /section -->
 		<!-- section -->
+		<div class="section">
+			<h2>.</h2>
+		</div>
 		<main>
 @include('layouts.content')
 

@@ -21,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/','PagesController@home');
+Route::get('search','PagesController@search');
+Route::get('/berita/kategori/{kategori_id}','PagesController@kategori');
 Route::get('/berita/{artikel_id}','PagesController@berita');
 Route::get('/gallery','PagesController@gallery');
 Route::get('/profile/struktur','PagesController@profile1');

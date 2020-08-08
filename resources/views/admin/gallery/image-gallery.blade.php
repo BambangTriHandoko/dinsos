@@ -5,8 +5,33 @@
 
 <div class="container">
 
+<table class="table table-stripped myTable">
+<thead>
+<tr>
+<th>no</th>
+<th>nama kategori</th>
+<th>dibuat oleh</th>
+<th>dibuat pada</th>
+<th>#</th>
+</tr>
+</thead>
+@foreach($images as $index=>$kt )
+<tbody>
+<tr>
+    <td>{{ $index+1 }}</td>
+    <td>{{$kt->nama}}</td>
+    <td>{{$kt->name}}</td>
+    <td>{{$kt->created_at}}</td>
+    <td><form action="{{ url('/admin/gallery/image-gallery',$kt->id) }}" method="POST">
+                    <input type="hidden" name="_method" value="delete" >
+                    {!! csrf_field() !!}
+                    <button type="submit" class="close-icon btn btn-danger">delete<i class="glyphicon glyphicon-remove"></i></button>
+                    </form></td>
+     </tbody>
+@endforeach
+</table>
 
-    <h3>GALLERY</h3>
+    <h5>TAMBAH KATEGORY</h5>
     <form action="{{ url('/admin/gallery/image-gallery') }}" class="form-image-upload" method="POST" enctype="multipart/form-data">
 
 
@@ -35,12 +60,8 @@
 
         <div class="row">
             <div class="col-md-5">
-                <strong>Title:</strong>
-                <input type="text" name="title" class="form-control" placeholder="Title">
-            </div>
-            <div class="col-md-5">
-                <strong>Image:</strong>
-                <input type="file" name="image" class="form-control">
+                <strong>nama kategori</strong>
+                <input type="text" name="nama" class="form-control" placeholder="Title">
             </div>
             <div class="col-md-2">
                 <br/>
@@ -55,29 +76,6 @@
     <div class="row">
     <div class='list-group gallery'>
 
-    <div class="card-deck">
-
-            @if($images->count())
-                @foreach($images as $image)
-
-  <div class="col mb-4">
-    <div class="card">
-      <img src="/images/{{ $image->image }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{ $image->title }}</h5>
-        <p class="card-text">di upload pada {{$image->updated_at}}</p>
-        <form action="{{ url('/admin/gallery/image-gallery',$image->id) }}" method="POST">
-                    <input type="hidden" name="_method" value="delete" >
-                    {!! csrf_field() !!}
-                    <button type="submit" class="close-icon btn btn-danger">delete<i class="glyphicon glyphicon-remove"></i></button>
-                    </form>
-      </div>
-    </div>
-  </div>
-
-                 @endforeach
-            @endif
-            </div>
 
         </div> <!-- list-group / end -->
     </div> <!-- row / end -->

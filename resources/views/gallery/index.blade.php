@@ -10,7 +10,7 @@
                 <div class="col-md-8">
                 <br>
                     <div class="section-title">
-                            <h2>Berita Harian</h2>
+                            <h2>cek</h2>
                         </div>
                     </div>
         <div class="row">
@@ -27,7 +27,7 @@
             <!-- post -->
             <!-- /post -->
             <?php 
-                $artikel = \DB::table('artikel')->orderby('created_at','desc')->get(); 
+                $artikel = \DB::table('artikel')->orderby('created_at','desc')->paginate(12); 
                 ?>
 
 @foreach($artikel as $at)
@@ -42,7 +42,7 @@
             <br>
             @endforeach
             <div class="clearfix visible-md visible-lg"></div>
-
+{{$artikel->links()}}
             <!-- post -->
             
             <!-- /post -->

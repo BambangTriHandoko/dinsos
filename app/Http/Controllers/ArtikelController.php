@@ -14,13 +14,14 @@ class ArtikelController extends Controller
      */
     public function index()
     {   $title = 'List Artikel';    
-        $data =\DB::table('artikel as a')->join('users as u','u.id','=','a.user_id')->get();
+        $data =\DB::table('artikel as a')->join('users as u','u.id','=','a.user_id')->join('kategori as k','k.id','=','a.kategori')->select('a.judul','a.created_at','u.name','k.nama as kategori')->where('a.user_id',\Auth::user()->id)->get();
         
         return view('admin/artikel/index',compact('title','data'));
     }
     public function create(){
         $title = 'Tambah Artikel';
-        return view('admin/artikel/create');
+        $kategori =\DB::table('kategori')->orderBy('nama','asc')->get();
+        return view('admin/artikel/create',compact('kategori'));
     }
     /**
      * Show the form for creating a new resource.
@@ -31,7 +32,8 @@ class ArtikelController extends Controller
     {
     	$this->validate($request, [
             'judul'=>'required',
-            'isi'=>'required'
+            'isi'=>'required',
+            'kategori'=>'required'
         ]);
         $file = $request->file('image');
         $data = array();
@@ -55,7 +57,7 @@ class ArtikelController extends Controller
         }
         \DB::table('artikel')->insert($data);
         \Session::flash('sukses','Data berhasil Tersimpan');
-        return redirect('admin/artikel');
+        return redirect('forms-admin');
 
           }
     /**
@@ -75,8 +77,9 @@ class ArtikelController extends Controller
     public function edit($id)
     {
         $title ='EDIT';
+        $kategori =\DB::table('kategori')->orderBy('nama','asc')->get();
         $dt = \DB::table('artikel')->where('artikel_id',$id)->first();
-        return view('admin.artikel.edit',compact('dt'));
+        return view('admin.artikel.edit',compact('dt','kategori'));
     }
 
     /**
@@ -120,7 +123,7 @@ class ArtikelController extends Controller
         }
         \DB::table('artikel')->where('artikel_id',$id)->update($data);
         \Session::flash('sukses','Data berhasil Tersimpan');
-        return redirect('admin/artikel');
+        return redirect('forms-admin');
     }
 
     /**

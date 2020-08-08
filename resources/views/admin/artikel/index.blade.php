@@ -5,7 +5,8 @@
 <div class="box">
 <div class="box-body">
 <a href="{{url('admin/artikel/create')}}" class="btn btn-flat btn-primary" style="margin-bottom: 12px;">TAMBAH</a>
-<table class="table table-stripped myTable">
+<div class="container mb-3 mt-3">
+<table class="table mydatatable" style="width: 100%;" id="mydatatable">
 <thead>
 <tr>
 <th>#</th>
@@ -13,6 +14,9 @@
 <th>kategori</th>
 <th>penulis</th>
 <th>dibuat pada</th>
+<th>edit</th>
+<th></th>
+<th> delete</th>
 </tr>
 </thead>
 <tbody>
@@ -32,9 +36,23 @@
 </tr>
 @endforeach
 </tbody>
+<tfoot><tr>
+<th>#</th>
+<th>judul</th>
+<th>kategori</th>
+<th>penulis</th>
+<th>dibuat pada</th>
+<th>edit</th>
+<th></th>
+<th> delete</th>
+
+</tr></tfoot>
 </table>
 </div>
+
 </div>
 </div>
 </div>
+</div>
+
     @endsection

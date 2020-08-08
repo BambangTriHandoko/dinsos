@@ -16,6 +16,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    -->
+   <link rel="icon" href="https://data.tasikmalayakota.go.id/wp-content/uploads/2018/05/Logo_Kota_Tasikmalaya.png" type="image/icon type">
+
   <title>Admin</title>
 
   <!-- Font Awesome Icons -->

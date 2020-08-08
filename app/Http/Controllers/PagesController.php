@@ -7,8 +7,20 @@ use App\ImageGallery;
 class PagesController extends Controller
 {
     public function home(){
-        return view('index');
+      $artikel = \DB::table('artikel as a')->join('kategori as k','k.id','=','a.kategori')->select('a.artikel_id','a.judul','a.gambar','a.created_at','k.nama as kategorii')->orderby('created_at','desc')->paginate(6);
+      $random = \DB::table('artikel as a')->join('kategori as k','k.id','=','a.kategori')->select('a.artikel_id','a.judul','a.gambar','a.created_at','k.nama as kategorii')->limit(2)->inRandomOrder()->get();
+  
+      return view('index',compact('artikel','random'));
+      }
+    public function search(Request $request){
+        $search = $request->search;
+        $artikel = \DB::table('artikel as a')->join('kategori as k','k.id','=','a.kategori')->where('a.judul','like','%'.$search.'%')->orwhere('a.isi','like','%'.$search.'%')->select('a.artikel_id','a.judul','a.gambar','a.created_at','k.nama as kategorii')->orderby('created_at','desc')->paginate(6);  
+        return view('index',compact('artikel'));
     }
+     public function kategori($kategori_id){
+      $data = \DB::table('artikel as a')->join('kategori as k','k.id','=','a.kategori')->where('a.kategori',$kategori_id)->select('a.artikel_id','a.judul','a.gambar','a.created_at','k.nama as kategorii')->orderby('created_at','desc')->paginate(6);
+      return view('/berita/kategori',compact('data'));
+  }
     public function profile(){
       $pegawai = Pegawai::all();
     	return view('profile/daftarpeg', ['pegawai' => $pegawai]);

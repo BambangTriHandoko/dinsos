@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ImageGallery extends Model
 {
-    protected $table = 'image_gallery';
+    protected $table = 'kategori';
 
 
-    protected $fillable = ['title','image'];
+    protected $fillable = ['nama'];
 }

@@ -19,7 +19,7 @@ class ImageGalleryController extends Controller
      */
     public function index()
     {
-    	$images = ImageGallery::get();
+    	$images = \DB::table('kategori as k')->join('users as u','k.user_id','=','u.id')->get();
     	return view('/admin/gallery/image-gallery',compact('images'));
     }
 
@@ -32,21 +32,19 @@ class ImageGalleryController extends Controller
     public function upload(Request $request)
     {
     	$this->validate($request, [
-    		'title' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:15048',
-        ]);
+    		'nama' => 'required',
+           ]);
+            $nama = $request->nama;
+            \DB::table('kategori')->insert([
 
-
-        $input['image'] = time().'.'.$request->image->getClientOriginalExtension();
-        $request->image->move(public_path('images'), $input['image']);
-
-
-        $input['title'] = $request->title;
-        ImageGallery::create($input);
-
-
+                'nama'=>$nama,
+                'user_id'=>\Auth::user()->id,
+                'created_at'=>date('Y-m-d H:i:s'),
+                'updated_at'=>date('Y-m-d H:i:s')
+            ]);
+        
     	return back()
-    		->with('success','Image Uploaded successfully.');
+    		->with('success');
     }
 
 
@@ -59,6 +57,6 @@ class ImageGalleryController extends Controller
     {
     	ImageGallery::find($id)->delete();
     	return back()
-    		->with('success','Image removed successfully.');	
+    		->with('success');	
     }
 }

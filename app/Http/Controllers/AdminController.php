@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Users;
+use App\Kategori;
 class AdminController extends Controller
 {
     public function index(){
@@ -12,4 +13,10 @@ class AdminController extends Controller
         
         return view('admin/artikel/index',compact('data'));   
     }
+    
+
+    
 }
+
+
+
