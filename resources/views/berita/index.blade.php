@@ -41,13 +41,7 @@
 					<!-- /Post content -->
 
 					<!-- aside -->
-					<div class="col-md-4">
-						<!-- ad -->
-						<div class="aside-widget text-center">
-							<a href="#" style="display: inline-block;margin: auto;">
-								<img class="img-responsive" src="./img/ad-1.jpg" alt="" style="display: none !important;">
-							</a>
-						</div>
+					
 						<!-- /ad -->
 
 						<!-- post widget -->
@@ -57,37 +51,39 @@
 						<!-- /post widget -->
 						
 						<!-- catagories -->
+						<div class="col-md-4">
+					<div class="post post-widget">
+								<a class="post-img" href="#"><img src="{{asset('iklan.png')}}" style="width: 300px; height: 300px;"alt=""></a>
+							</div>
+						<!-- catagories -->
 						<div class="aside-widget">
 							<div class="section-title">
 								<h2>Catagories</h2>
 							</div>
+
+							<div class="card">
 							<div class="category-widget">
-								<ul>
-                                <li><a href="#" class="cat-1">DINSOS<span>340</span></a></li>
-									<li><a href="#" class="cat-2">REHSOS<span>74</span></a></li>
-									<li><a href="#" class="cat-4">PKH<span>41</span></a></li>
-                                    <li><a href="#" class="cat-3">PEMBERSOS<span>35</span></a></li>
-                                </ul>
+							<?php 
+									$kategori = \DB::table('kategori')->get();
+								?>
+									@foreach($kategori as $k)
+									<?php 
+									$total = \DB::table('artikel')->where('kategori',$k->id)->count();
+								?>
+										
+							<ul>
+									<li><a href="{{url('/berita/kategori/'.$k->id)}}" class="cat-1">{{$k->nama}}<span>{{$total}}</span></a></li>
+									</ul>
+								@endforeach
+							</div>
 							</div>
 						</div>
-						<!-- /catagories -->
+					</div><!-- /catagories -->
 						
 						<!-- tags -->
 						<!-- /tags -->
 						
 						<!-- archive -->
-						<div class="aside-widget">
-							<div class="section-title">
-								<h2>Archive</h2>
-							</div>
-							<div class="archive-widget">
-								<ul>
-									<li><a href="#">January 2018</a></li>
-									<li><a href="#">Febuary 2018</a></li>
-									<li><a href="#">March 2018</a></li>
-								</ul>
-							</div>
-						</div>
 						<!-- /archive -->
 					</div>
 					<!-- /aside -->

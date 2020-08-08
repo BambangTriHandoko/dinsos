@@ -10,7 +10,7 @@
 							<a class="post-img" href="{{url('/berita/'.$r->artikel_id)}}"><img src="{{asset('uploads/'.$r->gambar)}}" style="width: 560px; height: 300px;"  alt=""></a>
 							<div class="post-body">
 								<div class="post-meta">
-									<a class="post-category cat-2" href="category.html">{{$r->kategorii}}</a>
+									<a class="post-category cat-2" href="{{url('/berita/'.$r->artikel_id)}}">{{$r->kategorii}}</a>
 								
 								</div>
 								<h3 class="post-title"><a href="blog-post.html">{{$r->judul}}</a></h3>

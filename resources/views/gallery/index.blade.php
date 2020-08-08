@@ -70,13 +70,19 @@
                         <h2>Catagories</h2>
                     </div>
                     <div class="category-widget">
-                        <ul>
-                            <li><a href="#" class="cat-1">DINSOS<span>340</span></a></li>
-                            <li><a href="#" class="cat-2">REHSOS<span>74</span></a></li>
-                            <li><a href="#" class="cat-4">PKH<span>41</span></a></li>
-                            <li><a href="#" class="cat-3">PEMBERSOS<span>35</span></a></li>
-                        </ul>
-                    </div>
+                    <?php 
+									$kategori = \DB::table('kategori')->get();
+								?>
+									@foreach($kategori   as $k)
+									<?php 
+									$total = \DB::table('artikel')->where('kategori',$k->id)->count();
+								?>
+										
+							<ul>
+									<li><a href="{{url('/berita/kategori/'.$k->id)}}" class="cat-1">{{$k->nama}}<span>{{$total}}</span></a></li>
+									</ul>
+								@endforeach
+</div>
                 </div>
                 </div>
                 <!-- /catagories -->
