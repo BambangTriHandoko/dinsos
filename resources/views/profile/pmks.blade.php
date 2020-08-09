@@ -1,14 +1,18 @@
 
 @include('profile/header')
 <div class="container">
+<div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
     
-<p><b> <h2 style="text-align:center"> SASARAN PEMBANGUNAN/PENYELENGGARAAN KESEJAHTERAAN SOSIAL </h2></b> </p> 
-<p > <h4 style="text-align:center">Penyandang Masalah Kesejahteraan Sosial yang selanjutnya disebut PMKS adalah perseorangan, keluarga, kelompok, dan/atau masyarakat yang karena suatu hambatan, kesulitan, atau gangguan, tidak dapat melaksanakan fungsi sosialnya, sehingga tidak dapat terpenuhi kebutuhan hidupnya baik jasmani, rohani, maupun sosial secara memadai dan wajar.</h4></p> 
+<p><b> <h3 style="text-align:justify;"> SASARAN PEMBANGUNAN/PENYELENGGARAAN KESEJAHTERAAN SOSIAL </h3></b> </p> 
+<p > <h4 style="text-align:justify; text-indent: 0.7in;" >Penyandang Masalah Kesejahteraan Sosial yang selanjutnya disebut PMKS adalah perseorangan, keluarga, kelompok, dan/atau masyarakat yang karena suatu hambatan, kesulitan, atau gangguan, tidak dapat melaksanakan fungsi sosialnya, sehingga tidak dapat terpenuhi kebutuhan hidupnya baik jasmani, rohani, maupun sosial secara memadai dan wajar.</h4></p> 
 
-<p><b> <h2  style="text-align:center"> Penyandang Masalah Kesejahteraan Sosial (PMKS) </h2></b></p>  
-<p ><h4 style="text-align:center"> Penyandang Masalah Kesejahteraan Sosial yang selanjutnya disebut PMKS adalah perseorangan, keluarga, kelompok, dan/atau masyarakat yang karena suatu hambatan, kesulitan, atau gangguan, tidak dapat melaksanakan fungsi sosialnya, sehingga tidak dapat terpenuhi kebutuhan hidupnya baik jasmani, rohani, maupun sosial secara memadai dan wajar.</h4></p> 
+<p><b> <h3  style="text-align:justify;"> Penyandang Masalah Kesejahteraan Sosial (PMKS) </h3></b></p>  
+<p ><h4 style="text-align:justify; text-indent: 0.7in;" > Penyandang Masalah Kesejahteraan Sosial yang selanjutnya disebut PMKS adalah perseorangan, keluarga, kelompok, dan/atau masyarakat yang karena suatu hambatan, kesulitan, atau gangguan, tidak dapat melaksanakan fungsi sosialnya, sehingga tidak dapat terpenuhi kebutuhan hidupnya baik jasmani, rohani, maupun sosial secara memadai dan wajar.</h4></p> 
 
-<p><b> <h2 style="text-align:center"> Penyandang Masalah Kesejahteraan Sosial (PMKS) meliputi : </h2></b> </p> 
+<p><b> <h3 style="text-align:justify;"> Penyandang Masalah Kesejahteraan Sosial (PMKS) meliputi : </h3></b> </p> 
 <p ><h4 style="text-align: left; text-indent: 0.7in;">1. Anak Balita Terlantar </h4></p> 
 <p ><h4 style="text-align: left; text-indent: 0.7in;">2. Anak Terlantar </h4></p> 
 <p ><h4 style="text-align: left; text-indent: 0.7in;">3. Anak berhadapan dengan hukum </h4></p> 
@@ -36,7 +40,7 @@
 <p ><h4 style="text-align: left; text-indent: 0.7in;">25.Keluarga bermasalah sosial psikologi </h4></p>
 <p> <h4 style="text-align: left; text-indent: 0.7in;">Potensi dan Sumber Kesejahteraan Sosial yang selanjutnya disebut PSKS adalah perseorangan, keluarga, kelompok, dan/atau masyarakat yang dapat berperan serta untuk menjaga, menciptakan, mendukung, dan memperkuat penyelenggaraan kesejahteraan sosial. </h4> </p> 
 
-<p><b> <h2 style="text-align:center"> Potensi dan Sumber Kesejahteraan Sosial (PSKS) meliputi : </h2></b> </p> 
+<p><b> <h3 style="text-align:justify;"> Potensi dan Sumber Kesejahteraan Sosial (PSKS) meliputi : </h3></b> </p> 
 <p ><h4 style="text-align: left; text-indent: 0.7in;">1. Pekerja Sosial (Profesional) </h4></p> 
 <p ><h4 style="text-align: left; text-indent: 0.7in;">2. Pekerja Sosial Masyarakat (PSM) </h4></p> 
 <p ><h4 style="text-align: left; text-indent: 0.7in;">3. Taruna siaga bencana (TAGANA) </h4></p> 
@@ -48,5 +52,6 @@
 <p ><h4 style="text-align: left; text-indent: 0.7in;">9. Human Trafficking</h4></p> 
 
 </div>
+</div></div>
 @include('profile/sidebar')
 @include('profile/footer')

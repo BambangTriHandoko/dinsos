@@ -1,6 +1,10 @@
 
 @include('profile/header')
 <div class="container">
+<div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
 <p > <h1 style="text-align: center;"><b>Tugas Pokok dan Fungsi</h1></p>
 <p ><b> <h4 style="text-align: left; text-indent: 0.7in;">Bagian Ke satu : Kepala Dinas Sosial</h4></p>
 <p > <h4 style="text-align: left; text-indent: 0.5in;">(1) Kepala Dinas mempunyai tugas pokok merumuskan sasaran, mengarahkan, menyelenggarakan,  </h4></p>
@@ -275,7 +279,7 @@
 <p > <h4 style="text-align: left; text-indent: 0.7in;">f. melaksanakan pemantauan, evaluasi dan pelaporan yang berkaitan dengan Seksi Jaminan Sosial;</h4></p>
 <p > <h4 style="text-align: left; text-indent: 0.7in;">g. melaksanakan koordinasi dengan unit kerja terkait; dan</h4></p>
 <p > <h4 style="text-align: left; text-indent: 0.7in;">h. melaksanakan tugas kedinasan lain sesuai dengan tugas dan fungsinya. </h4></p>
-
+</div></div>
 </div>
 @include('profile/sidebar')
 @include('profile/footer')

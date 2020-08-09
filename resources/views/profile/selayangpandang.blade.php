@@ -1,9 +1,13 @@
 @include('profile/header')
 <div class="container"  >
+<div class="row">
+<div class="col-md-1">
+    </div>
+    <div class="col-md-10">
  <h1 ><b><p style="text-align: center; text-indent: 0.7in;"> Selayang Pandang </p></b></h1> 
 <h4> <p style="text-align: justify;text-indent: 0.6in;">Pada Awal tahun 2004 Dinas Ketertiban Dan Perlindungan sosial Kota Tasikmalaya diturunkan statusnya menjadi Kantor Perlindungan Sosial. Sejalan dengan berjalannya waktu Kantor perlindungan Sosial pada tahun 2009 dinaikan kembali statusnya dengan dikeluarkanya Peraturan Daerah Kota Tasikmalaya Nomor 8 tahun 2008 tentang Pembentukan Organisasi Perangkat Daerah (Lembaran Daerah Kota Tasikmalaya Tahun 2008  Nomor 92); menjadi Dinas Sosial Tenaga Kerja dan Transmigrasi, dengan tugas pokoknya melaksanakan kewenangan otonomi Daerah Di bidang Sosial termasuk Penanganan Bencana, Ketenagakerjaan dan Transmigrasi.Tahun 2016 dikeluarkan peraturan Walikota Tasikmalaya Nomor 60 Tahun 2016 Tentang Tugas Pokok Dan Rincian Tugas Unit  Dinas Sosial Kota Tasikmalaya.</p></h4>
-<h4> <p style="text-align: center; text-indent: 0.7in;">Atas dasar hal tersebut maka secara singkat digambarkan sejarah singkat sebagai berikut :</h4></p></p></h4>
-</div>
+<h4> <p style="text-align: center; text-indent: 0.3in;">Atas dasar hal tersebut maka secara singkat digambarkan sejarah singkat sebagai berikut :</h4></p></p></h4>
+
 <table border=5 cellpadding=10 cellspacing=10 align=center>
                         <tr bgcolor=silver>
                             <td ><h5 style="align=center">TAHUN</td>
@@ -57,6 +61,7 @@
                             <td><h5>Dinas Sosial Kota Tasikmalaya
 <br>Alamat : Jl. Ir. H. Djuanda Komp. Perkantoran Tasikmalaya</tr>
                         </table>
-
+</div></div></div> 
 @include('profile/sidebar')
+</div>
 @include('profile/footer')

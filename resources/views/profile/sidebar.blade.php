@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
 
-      <span class="brand-text font-weight-light"><h5>PROFILE<h5></span>
+      <span class="brand-text font-weight-light"><h5><b>PROFILE</b><h5></span>
     </a>
 
     <!-- Sidebar -->

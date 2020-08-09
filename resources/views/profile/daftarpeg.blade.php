@@ -1,13 +1,17 @@
 
 @include('profile/header')
-
+<div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-10">
+    
         <div class="container">
             <div class="card mt-5">
                 <div class="card-header text-center">
-                    Daftar Pegawai 
+                   <h3><b> Daftar Pegawai </b></h3> 
                 </div>
                 <div class="card-body">
-                    <table class="table table-bordered table-hover table-striped">
+                    <table class="table table-bordered table-hover table-striped mytable">
                         <thead>
                             <tr>
                                 <th>NIP</th>
@@ -38,5 +42,6 @@
                 </div>
             </div>
         </div>
+        </div></div>
         @include('profile/sidebar')
 @include('profile/footer')
