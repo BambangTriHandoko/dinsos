@@ -53,10 +53,11 @@ class ImageGalleryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-    	ImageGallery::find($id)->delete();
-    	return back()
+        $images = ImageGallery::find($id);
+        $images->delete();
+        return back()
     		->with('success');	
     }
 }

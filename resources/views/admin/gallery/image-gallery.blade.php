@@ -22,11 +22,7 @@
     <td>{{$kt->nama}}</td>
     <td>{{$kt->name}}</td>
     <td>{{$kt->created_at}}</td>
-    <td><form action="{{ url('/admin/gallery/image-gallery',$kt->id) }}" method="POST">
-                    <input type="hidden" name="_method" value="delete" >
-                    {!! csrf_field() !!}
-                    <button type="submit" class="close-icon btn btn-danger">delete<i class="glyphicon glyphicon-remove"></i></button>
-                    </form></td>
+    <td><a href="/admin/kategori/delete/{{$kt->id}}" class="btn btn-flat btn-danger" style="margin-bottom: 12px;">Hapus</a></td>
      </tbody>
 @endforeach
 </table>
