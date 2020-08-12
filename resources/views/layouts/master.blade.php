@@ -5,9 +5,11 @@
             header{
                 background-color: #F8F8FF;
             }
-            main{
-                background-color: #F0FFF0;
-            }
+            main{background-image: url("{{asset('images/bg.gif')}} ");
+  background-repeat: no-repeat;
+    background-size: cover;
+
+              }
             footer{
                 background-color: #FAEBD7;
             }
@@ -63,7 +65,7 @@
 							<li class="cat-1"><a href="{{url('/layanan/index')}}">Layanan</a></li>
 							<li class="cat-2"><a href="{{url('/gallery')}}">Galery</a></li>
 							<li class="cat-3"><a href="http://pkh.dinsos.tasikmalayakota.go.id">PKH</a></li>
-							<li class="cat-4"><a href="category.html">Visualisasi</a></li>
+							<li class="cat-4"><a href="{{url('visualisasi')}}">Visualisasi</a></li>
 						</ul>
 						<!-- /nav -->
 

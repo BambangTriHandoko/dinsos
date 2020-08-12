@@ -1,12 +1,19 @@
 @extends('layouts/main')
 @section('content')
+
 <div class="section">
 			<!-- container -->
 			<div class="container">
-        <br>
+        	<div class="row">
             <br>
+            <div class="col-md-12">
+            <br>
+            <div class="col-md-12">
+			<a class="post-img" href="#"><img src="{{asset('images/banner.jpg')}}" style="width: 1120px; height: 200px;"  alt=""></a>
+				</div>
+                <div class="col-md-12"><br></div>
 <div class="section-row">
-    <h3><B>LAYANAN DINAS SOSIAL</b></h3>
+    <h3 style="text-align:center;"><B> <br>LAYANAN DINAS SOSIAL</b></h3>
 <a  href="{{url('/page1')}}" class="btn btn-primary btn-lg btn-block"role="button" aria-disabled="true"><b>1.Bantuan Orang Terlantar Dalam Perjalanan(BOTP)</b></a>
 <a  href="{{url('/page1')}}" class="btn btn-primary btn-lg btn-block"role="button" aria-disabled="true"><b>2.Rekomendasi KIS,KIP,jampersal,dan Jamkesda</b></a>
 <a  href="{{url('/page1')}}" class="btn btn-primary btn-lg btn-block"role="button" aria-disabled="true"><b>3.Rekomendasi Pengangkatan Anak</b></a>
@@ -25,5 +32,5 @@
                         </div>
 		</div>
 		
-
+</div></div>
 @endsection

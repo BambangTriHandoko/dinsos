@@ -57,6 +57,9 @@ class PagesController extends Controller
     public function gallery(){
       return view('gallery/index');
     }
+    public function visual(){
+      return view('visualisasi/index');
+    }
     public function layanan(){
       return view('layanan/index');
   }

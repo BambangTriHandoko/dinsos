@@ -33,13 +33,41 @@
       <a class="nav-item nav-link active" href="{{url('/')}}">Home</a>
       <a class="nav-item nav-link" href="{{url('/profile')}}">Profil</a>
       <a class="nav-item nav-link" href="{{url('/layanan/index')}}">Layanan</a>
-      <a class="nav-item nav-link" href="{{url('/gallery/index')}}">galery</a>
-      <a class="nav-item nav-link" href="{{url('/Visualisasi')}}">Visualisasi</a>
+    <a class="nav-item nav-link" href="{{url('/gallery')}}">galery</a>
+      <a class="nav-item nav-link" href="{{url('visualisasi')}}">Visualisasi</a>
       <a class="nav-item nav-link" href="http://pkh.dinsos.tasikmalayakota.go.id">PKH</a>
-      <a class="nav-item nav-link" href="{{url('/Agenda')}}">Agenda</a>
       
     </div>
   </div>
 </div>
     </ul>
   </nav>
+  <style>
+  h1
+{
+    color: white;
+    font-family: sans-serif;
+    }
+  h3
+{
+    color: white;
+    font-family: sans-serif;
+    }
+  h4
+{
+    color: white;
+    font-family: sans-serif;
+    }
+    h2
+{
+    color: white;
+    font-family: sans-serif;
+    }
+body {
+	background-image: url("{{asset('images/bc3.jpg')}} ");
+  background-repeat: no-repeat;
+    background-size: cover;
+
+} 
+
+</style>

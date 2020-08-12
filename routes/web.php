@@ -25,6 +25,7 @@ Route::get('search','PagesController@search');
 Route::get('/berita/kategori/{kategori_id}','PagesController@kategori');
 Route::get('/berita/{artikel_id}','PagesController@berita');
 Route::get('/gallery','PagesController@gallery');
+Route::get('/visualisasi','PagesController@visual');
 Route::get('/profile/struktur','PagesController@profile1');
 Route::get('/profile/tupoksi','PagesController@profile2');
 Route::get('/profile/tujuan','PagesController@profile3');

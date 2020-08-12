@@ -2,11 +2,13 @@
 <html lang="en">
 	<head>
 	<style>
+
             header{
                 background-color: #F8F8FF;
             }
-            main{
-                background-color: #F8F8FF;
+            body{
+				background-color: #F0FFF0;
+            
             }
             footer{
                 background-color: #FAEBD7;
@@ -38,7 +40,13 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <style type="text/css">
+   #mapid { height: 580px;
+            width: 900px; }
+   </style>
     </head>
 	<body>
 
@@ -62,7 +70,7 @@
 							<li class="cat-1"><a href="{{url('/layanan/index')}}">Layanan</a></li>
 							<li class="cat-2"><a href="{{url('/gallery')}}">Galery</a></li>
 							<li class="cat-3"><a href="http://pkh.dinsos.tasikmalayakota.go.id">PKH</a></li>
-							<li class="cat-4"><a href="category.html">Visualisasi</a></li>
+							<li class="cat-4"><a href="{{url('visualisasi')}}">Visualisasi</a></li>
 						</ul>
 						<!-- /nav -->
 
@@ -149,6 +157,90 @@
 		<script src="{{asset('webmag/js/jquery.min.js')}}"></script>
 		<script src="{{asset('webmag/js/bootstrap.min.js')}}"></script>
 		<script src="{{asset('webmag/js/main.js')}}"></script>
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+
+<script src="{{asset('geo/leaflet.ajax.js')}}"></script>
+   <script type="text/javascript">
+   var mymap = L.map('mapid').setView([-7.350029, 108.2224596], 12);
+   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
+}).addTo(mymap);
+
+var myStyle = {
+    "color": " #FFFF00",
+    "weight": 5,
+    "opacity": 0.65
+};var myStyle1 = {
+    "color": "#FF69B4",
+    "weight": 5,
+    "opacity": 0.65
+};var myStyle2 = {
+    "color": "#0000FF",
+    "weight": 5,
+    "opacity": 0.65
+};
+var myStyle3 = {
+    "color": "#A0522D",
+    "weight": 5,
+    "opacity": 0.65
+};
+var myStyle4 = {
+    "color": "red",
+    "weight": 5,
+    "opacity": 0.65
+};
+var myStyle5 = {
+    "color": "#FFA500",
+    "weight": 5,
+    "opacity": 0.65
+};
+var myStyle6 = {
+    "color": "#FF6347",
+    "weight": 5,
+    "opacity": 0.65
+};
+var myStyle7 = {
+    "color": "#2E8B57",
+    "weight": 5,
+    "opacity": 0.65
+};
+var myStyle8 = {
+    "color": "#00FFFF",
+    "weight": 5,
+    "opacity": 0.65
+};
+var myStyle9 = {
+    "color": "#7FFF00",
+    "weight": 5,
+    "opacity": 0.65
+};
+function popUp(f,l){
+    var out = [];
+    if (f.properties){
+        for(key in f.properties){
+            out.push(key+": "+f.properties[key]);
+        }
+        l.bindPopup(out.join("<br />"));
+    }
+}
+var jsonTest = new L.GeoJSON.AJAX(["{{asset('geo/Kec.tawang.geojson')}}"],{onEachFeature:popUp,style: myStyle}).addTo(mymap);
+var jsonTest = new L.GeoJSON.AJAX(["{{asset('geo/Kec.cipedes.geojson')}}"],{onEachFeature:popUp,style: myStyle1}).addTo(mymap);
+var jsonTest = new L.GeoJSON.AJAX(["{{asset('geo/Kec.mangkubumi.geojson')}}"],{onEachFeature:popUp,style: myStyle2}).addTo(mymap);
+var jsonTest = new L.GeoJSON.AJAX(["{{asset('geo/Kec.purbaratu.geojson')}}"],{onEachFeature:popUp,style: myStyle3}).addTo(mymap);
+var jsonTest = new L.GeoJSON.AJAX(["{{asset('geo/Kec.kawalu.geojson')}}"],{onEachFeature:popUp,style: myStyle4}).addTo(mymap);
+var jsonTest = new L.GeoJSON.AJAX(["{{asset('geo/Kec.tamansari.geojson')}}"],{onEachFeature:popUp,style: myStyle5}).addTo(mymap);
+var jsonTest = new L.GeoJSON.AJAX(["{{asset('geo/Kec.bungursari.geojson')}}"],{onEachFeature:popUp,style: myStyle6}).addTo(mymap);
+var jsonTest = new L.GeoJSON.AJAX(["{{asset('geo/Kec.indihiang.geojson')}}"],{onEachFeature:popUp,style: myStyle7}).addTo(mymap);
+var jsonTest = new L.GeoJSON.AJAX(["{{asset('geo/Kec.cihideung.geojson')}}"],{onEachFeature:popUp,style: myStyle8}).addTo(mymap);
+var jsonTest = new L.GeoJSON.AJAX(["{{asset('geo/Kec.cibeureum.geojson')}}"],{onEachFeature:popUp,style: myStyle9}).addTo(mymap);
+   </script>
 
 	</body>
 </html>

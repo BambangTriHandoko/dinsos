@@ -5,6 +5,8 @@
     <div class="col-md-1">
     </div>
     <div class="col-md-10">
+    <h3><b>Berdasarkan Peraturan Walikota Nomor 60 Tahun 2016 Tentang Tugas Pokok
+Dan Rincian Tugas Unit Dinas Sosial Kota Tasikmalaya</b></h3>
 <p > <h1 style="text-align: center;"><b>Tugas Pokok dan Fungsi</h1></p>
 <p ><b> <h4 style="text-align: left; text-indent: 0.7in;">Bagian Ke satu : Kepala Dinas Sosial</h4></p>
 <p > <h4 style="text-align: left; text-indent: 0.5in;">(1) Kepala Dinas mempunyai tugas pokok merumuskan sasaran, mengarahkan, menyelenggarakan,  </h4></p>
