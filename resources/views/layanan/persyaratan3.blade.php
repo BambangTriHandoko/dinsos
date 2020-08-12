@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Rekomendasi Pengangkatan Anak</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{asset('side/css/style.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{asset('side/css/bootstrap.min.css')}}"/>
+  </head>
+  <body>
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+        </div>
+				<div class="p-4 pt-5">
+		  		<h1><a href="{{url('layanan/index')}}" class="logo">Layanan</a></h1>
+	        <ul class="list-unstyled components mb-5">
+	          <li class="active">
+	            <a href="{{URL::to('/layanan/persyaratan3')}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Persyaratan</a>
+	          </li>
+	          <li>
+	              <a href="{{URL::to('/layanan/pp3')}}">Prosedur Pelayanan</a>
+	          </li>
+	          <li>
+              <a href="{{URL::to('/layanan/jk3')}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Jangka Waktu</a>
+	          </li>
+	          <li>
+              <a href="{{URL::to('/layanan/propel3')}}">Produk Pelayanan</a>
+	          </li>
+	          <li>
+              <a href="#">Galeri</a>
+	          </li>
+	        </ul>
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+
+        <h1 class="mb-4">Rekomendasi Pengangkatan Anak</h1>
+        <p><b> <h2 style="text-align:left"> Persyaratan : </h2></b> </p>
+        <p><b> <h3 style="text-align:left"> A. Persyaratan Pengangkatan Anak </h3></b> </p>
+        <p>1. Surat Keterangan Sehat Calon Orang Tua Angkat (COTA) dari Rumah Sakit Pemerintah</p>
+        <p>2. Surat Keterangan Kesehatan Jiwa COTA dari Dokter Spesialis Jiwa dari Rumah Sakit Pemerintah (Suami dan Istri)</p>
+        <p>3. Surat Keterangan tentang fungsi organ reproduksi COTA dari Dokter Spesialis Obstetri dan Ginekologi Rumah Sakit Pemerintah</p>
+        <p>4. Copy Akta Kelahiran COTA (Suami dan Istri)</p>
+        <p>5. Copy Akta Kelahiran CAA</p>
+        <p>6. Surat Keterangan Catatan Kepolisian (SKCK) setempat (Suami dan Istri)</p>
+        <p>7. Kartu Keluarga dan KTP COTA (Suami dan Istri)</p>
+        <p>8. Copy Surat Nikah / Akta Perkawinan COTA (Suami dan Istri)</p>
+        <p>9. Keterangan penghasilan dari tempat bekerja COTA</p>
+        <p>10. Akta Kelahiran Calon Anak Angkat</p>
+        <p>11. Foto calon orang tua angkat (Suami dan Istri) dan calon anak angkat</p>
+        <p>12. Pas Foto 4X6 latar belakang merah, untuk orang tua angkat (2 lembar)</p>
+        <p>13. Surat izin dari orang tua kandung/wali yang sah dari CAA (bermaterai)</p>
+        <p>14. Surat keterangan persetujuan dari orang tua atau kerabat COTA (bermaterai)</p>
+        <p>15. Surat pernyataan yang menyatakan bahwa :</p>
+        <p style="text-align: left; text-indent: 0.2in;">a. Pengangkatan anak demi perlindungan dan kepentingan terbaik bagi anak (bermaterai).</p>
+        <p style="text-align: left; text-indent: 0.2in;">b. COTA akan memperlakukan anak angkat dan anak kandung tanpa diskriminasi sesuai dengan hak – hak dan kebutuhan anak (bermaterai)</p>
+        <p style="text-align: left; text-indent: 0.2in;">c. COTA akan memberitahu kepada anak mengenai asal usulnya dengan memperhatikan kesiapan anak.</p>
+        <p>16. Surat pernyataan COTA yang menyatakan bahwa seluruh dokumen yang diajukan syah dan sesuai akta yang sebenarnya (bermaterai)</p>
+
+        <p><b> <h3 style="text-align:left"> A. Persyaratan Pengangkatan Anak </h3></b> </p>
+        <p>1. Umur minimal 30 tahun dan maksimal 55 tahun berdasarkan bukti identitas diri yang sah (akta kelahiran, atau bukti lainnya)</p>
+        <p>2. Telah menikah sekurang-kurangnya 5 tahun yang dibuktikan dengan Surat Nikah atau Akta Perkawinan</p>
+        <p>3. Belum mempunyai anak, atau hanya mempunyai seorang anak</p>
+        <p>4. Tidak mungkin mempunyai anak yang dibuktikan oleh Dokter Ahli Kandungan dari Rumah Sakit Pemerintah</p>
+        <p>5. Se-Agama dengan anak yang diangkat</p>
+        <p>6. Dalam keadaan mampu ekonomi berdasarkan surat keterangan dari tempatnya bekerja</p>
+        <p>7. Surat Keterangan Catatan Kepolisian (SKCK) yang dikeluarkan dari kepolisian setempat</p>
+        <p>8. Dalam keadaan sehat jasmani berdasarkan keterangan dari Dokter Pemerintah</p>
+        <p>9. Dalam keadaan sehat secara mental berdasarkan keterangan Psikolog/Psikiater/Dokter</p>
+        <p>10. Membuat pernyataan tertulis yang menyatakan kesanggupan calon orang tua angkat untuk :</p>
+        <p style="text-align: left; text-indent: 0.2in;">a. Memenuhi kebutuhan jasmani, rohani, dan sosial anak secara wajar</p>
+        <p style="text-align: left; text-indent: 0.2in;">b. Tidak melantarkan anak</p>
+        <p style="text-align: left; text-indent: 0.2in;">c. Tidak memperlakukan anak secara semena – mena</p>
+        <p style="text-align: left; text-indent: 0.2in;">d. Memperlakukan anak angkat sama dengan anak kandung</p>
+        <p>11. Foto calon orang tua angkat (Suami dan Istri) dan calon anak angkat</p>
+        <p>12. Pas Foto 4X6 latar belakang merah, untuk orang tua angkat (2 lembar)</p>
+      </div>
+		</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="{{ asset('side/js/app.js') }}"></script>
+  </body>
+</html>
