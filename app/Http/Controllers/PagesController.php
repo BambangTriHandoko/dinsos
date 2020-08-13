@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Pegawai;
+use App\Visual;
 use Illuminate\Http\Request;
 use App\ImageGallery;
 class PagesController extends Controller
@@ -58,7 +59,16 @@ class PagesController extends Controller
       return view('gallery/index');
     }
     public function visual(){
-      return view('visualisasi/index');
+      $visual = Visual::all();
+      $categories = [];
+      $data = [];
+      $data1 = [];
+      foreach($visual as $kec){
+        $categories[] = $kec->kecamatan;
+        $data[] = $kec->PMKS;
+        $data1[] = $kec->PSKS;
+      }
+      return view('visualisasi/index',['visual'=>$visual,'categories'=>$categories,'data'=>$data,'data1'=>$data1]);
     }
     public function layanan(){
       return view('layanan/index');

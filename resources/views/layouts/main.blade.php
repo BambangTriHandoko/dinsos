@@ -44,8 +44,8 @@
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>
    <style type="text/css">
-   #mapid { height: 580px;
-            width: 900px; }
+   #mapid { height: 550px;
+            width: 550px; }
    </style>
     </head>
 	<body>
@@ -241,6 +241,6 @@ var jsonTest = new L.GeoJSON.AJAX(["{{asset('geo/Kec.indihiang.geojson')}}"],{on
 var jsonTest = new L.GeoJSON.AJAX(["{{asset('geo/Kec.cihideung.geojson')}}"],{onEachFeature:popUp,style: myStyle8}).addTo(mymap);
 var jsonTest = new L.GeoJSON.AJAX(["{{asset('geo/Kec.cibeureum.geojson')}}"],{onEachFeature:popUp,style: myStyle9}).addTo(mymap);
    </script>
-
+@yield('visual')
 	</body>
 </html>

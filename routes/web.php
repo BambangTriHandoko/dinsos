@@ -112,6 +112,13 @@ Route::get('/admin/artikel/{id_artikel}', 'ArtikelController@edit')->middleware(
 Route::put('/admin/artikel/{id_artikel}', 'ArtikelController@update')->middleware('auth');
 Route::get('/admin/artikel/delete/{id}', 'ArtikelController@destroy')->middleware('auth');
 
+Route::get('/admin/geo/', 'JsonController@index')->middleware('auth');
+Route::get('/admin/geo/edit/{id}', 'JsonController@edit')->middleware('auth');
+Route::post('/admin/geo/store', 'JsonController@store')->middleware('auth');
+Route::get('/admin/geo/create', 'JsonController@create')->middleware('auth');
+Route::put('/admin/geo/update/{id}', 'JsonController@update')->middleware('auth');
+Route::get('/admin/geo/delete/{id}', 'JsonController@delete')->middleware('auth');
+
 Route::get('/admin/pegawai/create', 'PegawaiController@create')->middleware('auth');
 Route::post('/admin/pegawai/store', 'PegawaiController@store')->middleware('auth');
 Route::get('/admin/pegawai/edit/{id}', 'PegawaiController@edit')->middleware('auth');

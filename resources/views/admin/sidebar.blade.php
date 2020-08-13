@@ -29,7 +29,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
-                Postingan Berita
+                Postingan
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -39,6 +39,13 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>BERITA</p>
                 </a>
+              
+                <li class="nav-item">
+              <a href="{{URL::to('admin/geo')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>VISUALISASI</p>
+                </a>
+              </li>
               </li>
               <li class="nav-item">
                 <a href="{{url('/admin/gallery/image-gallery')}}" class="nav-link">
