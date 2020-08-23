@@ -35,18 +35,8 @@
 <td></td></td>
 </tr>
 @endforeach
+{{ $data->links() }}
 </tbody>
-<tfoot><tr>
-<th>#</th>
-<th>judul</th>
-<th>kategori</th>
-<th>penulis</th>
-<th>dibuat pada</th>
-<th>edit</th>
-<th></th>
-<th> delete</th>
-
-</tr></tfoot>
 </table>
 </div>
 
@@ -56,3 +46,4 @@
 </div>
 
     @endsection
+    

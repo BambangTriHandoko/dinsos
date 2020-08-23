@@ -62,9 +62,11 @@ Highcharts.chart('chart', {
     },
     series: [{
         name: 'PMKS',
+        color: 'red',
         data: {!!json_encode($data)!!}},
         {
         name: 'PSKS',
+        color: 'blue',
         data: {!!json_encode($data1)!!}}]
 });
 </script>

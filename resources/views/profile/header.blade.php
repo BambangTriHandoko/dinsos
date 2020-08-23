@@ -16,7 +16,7 @@
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 
-<nav class="main-header navbar navbar-dark bg-dark navbar-expand-lg">
+<nav class="main-header navbar navbar bg-white font-black navbar-expand-lg">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -25,19 +25,18 @@
       <div class="container">
     
     <a class="navbar-brand" href="{{url('/')}}">
-    <img src="http://dinsos.tasikmalayakota.go.id/wp-content/uploads/2019/08/LOGO-BARU-DINSOS.png" width="180" height="40" class="d-inline-block align-top" alt="" loading="lazy">
+    <img src="{{asset('LOGO.png')}}" alt="" >
     
   </a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="{{url('/')}}">Home</a>
-      <a class="nav-item nav-link" href="{{url('/profile')}}">Profil</a>
-      <a class="nav-item nav-link" href="{{url('/layanan/index')}}">Layanan</a>
-    <a class="nav-item nav-link" href="{{url('/gallery')}}">galery</a>
-      <a class="nav-item nav-link" href="{{url('visualisasi')}}">Visualisasi</a>
-      <a class="nav-item nav-link" href="http://pkh.dinsos.tasikmalayakota.go.id">PKH</a>
-      
-    </div>
+      <li class="cat-1"><a class="nav-item nav-link active" href="{{url('/')}}">  <h5><b> Home</b></h5></a></li>      
+      <li class="cat-2"><a class="nav-item nav-link" href="{{url('/profile')}}">  <h5><b> Profil</b></h5></a></li>      
+      <li class="cat-3"><a class="nav-item nav-link" href="{{url('/layanan/index')}}">  <h5><b> Layanan</b></h5></a></li>      
+      <li class="cat-4">   <a class="nav-item nav-link" href="{{url('/gallery')}}">  <h5><b> galery</b></h5></a></li>      
+      <li class="cat-5">      <a class="nav-item nav-link" href="{{url('visualisasi')}}">  <h5><b> Visualisasi</b></h5></a></li>      
+      <li class="cat-6">      <a class="nav-item nav-link" href="http://pkh.dinsos.tasikmalayakota.go.id">  <h5><b>Mitra</b></h5></a></li>      
+       </div>
   </div>
 </div>
     </ul>
@@ -69,5 +68,10 @@ body {
     background-size: cover;
 
 } 
+footer{
+                background-color: #FAEBD7;
+            }
 
 </style>
+
+

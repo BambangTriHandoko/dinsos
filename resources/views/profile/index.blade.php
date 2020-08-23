@@ -22,17 +22,19 @@
 </div>
           </div>
           </div>
-          </main>
+
+        </main>
 <!-- Main Sidebar Container -->
 @include('profile/sidebar')
   <!-- Content Wrapper. Contains page content -->
     <!-- /.content-wrapper -->
 
 </div>
+@include('profile/footer')
+
 <!-- ./wrapper -->
 
 
 
 <!-- REQUIRED SCRIPTS -->
 
-@include('profile/footer')

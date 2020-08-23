@@ -9,7 +9,7 @@ class PagesController extends Controller
 {
     public function home(){
       $artikel = \DB::table('artikel as a')->join('kategori as k','k.id','=','a.kategori')->select('a.artikel_id','a.judul','a.gambar','a.created_at','k.nama as kategorii')->orderby('created_at','desc')->paginate(6);
-      $random = \DB::table('artikel as a')->join('kategori as k','k.id','=','a.kategori')->select('a.artikel_id','a.judul','a.gambar','a.created_at','k.nama as kategorii')->limit(2)->inRandomOrder()->get();
+      $random = \DB::table('artikel as a')->join('kategori as k','k.id','=','a.kategori')->select('a.artikel_id','a.judul','a.gambar','a.created_at','k.nama as kategorii')->limit(1)->inRandomOrder()->get();
   
       return view('index',compact('artikel','random'));
       }

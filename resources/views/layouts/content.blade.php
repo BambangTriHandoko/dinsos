@@ -5,15 +5,12 @@
 					<!-- post -->
 					@if(isset($random))
 					@foreach($random as $r)
-					<div class="col-md-6">
+					<div class="col-md-12">
 						<div class="post post-thumb">
-							<a class="post-img" href="{{url('/berita/'.$r->artikel_id)}}"><img src="{{asset('uploads/'.$r->gambar)}}" style="width: 560px; height: 300px;"  alt=""></a>
-							<div class="post-body">
-								<div class="post-meta">
-									<a class="post-category cat-2" href="{{url('/berita/'.$r->artikel_id)}}">{{$r->kategorii}}</a>
-								
-								</div>
-								<h3 class="post-title"><a href="blog-post.html">{{$r->judul}}</a></h3>
+						<a class="post-img" href="{{url('/berita/'.$r->artikel_id)}}"><img src="{{asset('images/logo.png')}}" style="width: 320px; height: 300px;"  alt=""><img src="{{asset('uploads/'.$r->gambar)}}" style="width: 820px; height: 300px;"  alt=""></a>
+							<div class="post-body">								
+								<h1 style="text-align: left; text-indent: 3.4in; color: white;">SELAMAT DATANG DI PORTAL DINAS SOSIAL </h1>
+								<h1 style="text-align: left; text-indent: 5.2in; color: white;"> KOTA TASIKMALAYA</h1>
 							</div>
 						</div>
 					</div> 
@@ -23,7 +20,7 @@
 					<!-- /post -->
 					<!-- /post -->
 				</div>
-<h3>berita harian</h3>
+<h1>Berita Harian</h1>
 <div class="row">
 	<div class="col-md-9">
 
