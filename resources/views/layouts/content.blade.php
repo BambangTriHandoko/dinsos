@@ -3,11 +3,10 @@
 <div class="container">
 <div class="row">	
 					<!-- post -->
-					@if(isset($random))
-					@foreach($random as $r)
+
 					<div class="col-md-12">
 						<div class="post post-thumb">
-						<a class="post-img" href="{{url('/berita/'.$r->artikel_id)}}"><img src="{{asset('images/logo.png')}}" style="width: 320px; height: 300px;"  alt=""><img src="{{asset('uploads/'.$r->gambar)}}" style="width: 820px; height: 300px;"  alt=""></a>
+						<a class="post-img" href="{{url('/')}}"><img src="{{asset('images/logo.png')}}" style="width: 320px; height: 300px;"  alt=""><img src="{{asset('images/br.jpg')}}" style="width: 820px; height: 300px;"  alt=""></a>
 							<div class="post-body">								
 								<h1 style="text-align: left; text-indent: 3.4in; color: white;">SELAMAT DATANG DI PORTAL DINAS SOSIAL </h1>
 								<h1 style="text-align: left; text-indent: 5.2in; color: white;"> KOTA TASIKMALAYA</h1>
@@ -15,8 +14,6 @@
 						</div>
 					</div> 
 					
-					@endforeach
-					@endif
 					<!-- /post -->
 					<!-- /post -->
 				</div>

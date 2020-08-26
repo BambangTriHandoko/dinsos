@@ -69,7 +69,7 @@
 							<li><a href="{{url('/profile')}}">Profile</a></li>
 							<li class="cat-1"><a href="{{url('/layanan/index')}}">Layanan</a></li>
 							<li class="cat-2"><a href="{{url('/gallery')}}">Galery</a></li>
-							<li class="cat-3"><a href="http://pkh.dinsos.tasikmalayakota.go.id">PKH</a></li>
+							<li class="cat-3"><a href="http://pkh.dinsos.tasikmalayakota.go.id">Mitra</a></li>
 							<li class="cat-4"><a href="{{url('visualisasi')}}">Visualisasi</a></li>
 						</ul>
 						<!-- /nav -->
